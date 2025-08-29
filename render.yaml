@@ -1,14 +1,18 @@
 services:
-  - type: worker
+  - type: web
     name: canvas-discord-announcer
     runtime: node
     plan: free
     buildCommand: "npm install"
     startCommand: "npm start"
     autoDeploy: true
+    healthCheckPath: /
     envVars:
       - key: POLL_INTERVAL
         value: "600"
+      - key: START_ISO
+        value: "2025-08-29T00:00:00Z"   # set to today's UTC date/time to avoid reposts
+      # Secrets to set in the Render dashboard (sync: false)
       - key: CANVAS_BASE
         sync: false
       - key: CANVAS_TOKEN
