@@ -1,0 +1,28 @@
+services:
+  - type: worker
+    name: canvas-discord-announcer
+    runtime: node   # ✅ correct key is "runtime", not "env"
+    plan: starter   # "starter" keeps it running 24/7; free may restart
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    autoDeploy: true
+    disk:
+      name: bot-state
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: STATE_PATH
+        value: /data/state.json
+      - key: POLL_INTERVAL
+        value: "600"
+      # These will be set as secrets in the Render dashboard
+      - key: CANVAS_BASE
+        sync: false
+      - key: CANVAS_TOKEN
+        sync: false
+      - key: CANVAS_COURSE_ID
+        sync: false
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: DISCORD_CHANNEL_ID
+        sync: false

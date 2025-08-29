@@ -1,0 +1,92 @@
+# ======================
+# macOS
+# ======================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ======================
+# VS Code
+# ======================
+.vscode/
+.history/
+*.code-workspace
+
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+*.log
+
+# ======================
+# Node.js
+# ======================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# ======================
+# C# / .NET
+# ======================
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ======================
+# Rust
+# ======================
+target/
+Cargo.lock
+
+# ======================
+# Java
+# ======================
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+
+# ======================
+# Android
+# ======================
+.gradle/
+.idea/
+*.apk
+*.ap_
+*.dex
+*.keystore
+local.properties
+captures/
+
+# ======================
+# Misc
+# ======================
+*.swp
+*.swo
+*.tmp
+*.bak
+*.env
+.env.local
